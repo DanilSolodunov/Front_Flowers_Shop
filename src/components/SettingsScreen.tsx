@@ -128,10 +128,10 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center py-16">
           <User className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-          <h2 className="text-xl font-semibold mb-2">Please Sign In</h2>
-          <p className="text-gray-600 mb-6">You need to be signed in to access settings</p>
+          <h2 className="text-xl font-semibold mb-2">Пожалуйста, войдите в систему</h2>
+          <p className="text-gray-600 mb-6">Для доступа к настройкам необходимо войти в систему</p>
           <Button onClick={onBack} className="bg-pink-500 hover:bg-pink-600">
-            Back to Catalog
+            На главный экран
           </Button>
         </div>
       </div>
@@ -143,9 +143,9 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
       <div className="flex items-center gap-3 mb-6">
         <Button variant="ghost" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back
+          Назад
         </Button>
-        <h1 className="text-2xl font-bold">Settings</h1>
+        <h1 className="text-2xl font-bold">Настройки</h1>
       </div>
 
       <div className="space-y-6">
@@ -154,17 +154,17 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <User className="w-5 h-5" />
-              Profile Information
+              Информация о пользователе
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name">Имя</Label>
               <Input
                 id="name"
                 value={profileData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
-                placeholder="Enter your name"
+                placeholder="Введите имя"
               />
             </div>
             <div>
@@ -174,7 +174,7 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
                 type="email"
                 value={profileData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
-                placeholder="Enter your email"
+                placeholder="Введите email"
               />
             </div>
             <Button 
@@ -183,7 +183,7 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
               className="bg-pink-500 hover:bg-pink-600"
             >
               <Save className="w-4 h-4 mr-2" />
-              {isLoading ? 'Saving...' : 'Save Profile'}
+              {isLoading ? 'Saving...' : 'Сохранить профиль'}
             </Button>
           </CardContent>
         </Card>
@@ -193,17 +193,17 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
-              Delivery Address
+              Адрес доставки
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <Label htmlFor="address">Default Address</Label>
+              <Label htmlFor="address">Укажите адрес доставки</Label>
               <Input
                 id="address"
                 value={profileData.address}
                 onChange={(e) => handleInputChange('address', e.target.value)}
-                placeholder="Enter your delivery address"
+                placeholder="Введите адрес доставки"
               />
             </div>
             <Button 
@@ -213,7 +213,7 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
               className="w-full"
             >
               <Save className="w-4 h-4 mr-2" />
-              {isLoading ? 'Saving...' : 'Save Address'}
+              {isLoading ? 'Saving...' : 'Сохранить адрес'}
             </Button>
           </CardContent>
         </Card>
@@ -223,19 +223,19 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Lock className="w-5 h-5" />
-              Change Password
+              Сменить пароль
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <Label htmlFor="currentPassword">Current Password</Label>
+              <Label htmlFor="currentPassword">Старый пароль</Label>
               <div className="relative">
                 <Input
                   id="currentPassword"
                   type={showPasswords.current ? 'text' : 'password'}
                   value={profileData.currentPassword}
                   onChange={(e) => handleInputChange('currentPassword', e.target.value)}
-                  placeholder="Enter current password"
+                  placeholder="Введите старый пароль"
                 />
                 <Button
                   type="button"
@@ -249,14 +249,14 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
               </div>
             </div>
             <div>
-              <Label htmlFor="newPassword">New Password</Label>
+              <Label htmlFor="newPassword">Новый пароль</Label>
               <div className="relative">
                 <Input
                   id="newPassword"
                   type={showPasswords.new ? 'text' : 'password'}
                   value={profileData.newPassword}
                   onChange={(e) => handleInputChange('newPassword', e.target.value)}
-                  placeholder="Enter new password"
+                  placeholder="Введите новый пароль"
                 />
                 <Button
                   type="button"
@@ -270,14 +270,14 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
               </div>
             </div>
             <div>
-              <Label htmlFor="confirmPassword">Confirm New Password</Label>
+              <Label htmlFor="confirmPassword">Повторите новый пароль</Label>
               <div className="relative">
                 <Input
                   id="confirmPassword"
                   type={showPasswords.confirm ? 'text' : 'password'}
                   value={profileData.confirmPassword}
                   onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
-                  placeholder="Confirm new password"
+                  placeholder="Введите новый пароль еще раз"
                 />
                 <Button
                   type="button"
@@ -297,7 +297,7 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
               className="w-full"
             >
               <Lock className="w-4 h-4 mr-2" />
-              {isLoading ? 'Changing...' : 'Change Password'}
+              {isLoading ? 'Changing...' : 'Сменить пароль'}
             </Button>
           </CardContent>
         </Card>
@@ -305,14 +305,14 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
         {/* Account Actions */}
         <Card className="border-red-200">
           <CardHeader>
-            <CardTitle className="text-red-600">Account Actions</CardTitle>
+            <CardTitle className="text-red-600">Действия с учетной записью</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-gray-600 mb-4">
-              Once you delete your account, there is no going back. Please be certain.
+              После удаления учетной записи пути назад нет. Пожалуйста, будьте уверены
             </p>
             <Button variant="destructive" className="w-full">
-              Delete Account
+            Удалить аккаунт
             </Button>
           </CardContent>
         </Card>

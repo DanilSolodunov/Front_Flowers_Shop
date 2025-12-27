@@ -17,12 +17,12 @@ export function SuccessScreen({ orderId, paymentMethod, onBackToCatalog }: Succe
           <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
             <CheckCircle className="w-8 h-8 text-green-600" />
           </div>
-          <CardTitle className="text-2xl text-green-600">Order Confirmed!</CardTitle>
+          <CardTitle className="text-2xl text-green-600">Заказ оформлен!</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <p className="text-lg font-semibold">Order #{orderId}</p>
-            <p className="text-gray-600">Your flower order has been successfully placed!</p>
+            <p className="text-lg font-semibold">Номер заказа #{orderId}</p>
+            <p className="text-gray-600">Ваш заказ цветов успешно оформлен!</p>
           </div>
 
           <div className="bg-gray-50 p-4 rounded-lg">
@@ -30,12 +30,12 @@ export function SuccessScreen({ orderId, paymentMethod, onBackToCatalog }: Succe
               {paymentMethod === 'cash' ? (
                 <>
                   <Wallet className="w-5 h-5 text-green-600" />
-                  <span className="font-medium text-green-800">Cash on Delivery</span>
+                  <span className="font-medium text-green-800">Оплата при доставке</span>
                 </>
               ) : (
                 <>
                   <CreditCard className="w-5 h-5 text-blue-600" />
-                  <span className="font-medium text-blue-800">Online Payment</span>
+                  <span className="font-medium text-blue-800">Online перевод</span>
                 </>
               )}
             </div>
@@ -48,16 +48,16 @@ export function SuccessScreen({ orderId, paymentMethod, onBackToCatalog }: Succe
           </div>
 
           <div className="space-y-2 text-sm text-gray-600">
-            <p>📧 You'll receive an email confirmation shortly</p>
-            <p>🚚 Delivery typically takes 1-2 business days</p>
-            <p>📱 You can track your order status in your account</p>
+            <p>📧 Вскоре вы получите подтверждение</p>
+            <p>🚚 Курьер приедет в назначенное время</p>
+            <p>📱 Вы можете отслеживать статус своего заказа в личном кабинете</p>
           </div>
 
           <Button 
             onClick={onBackToCatalog}
             className="w-full bg-pink-500 hover:bg-pink-600"
           >
-            Continue Shopping
+            Продолжить покупки
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </CardContent>

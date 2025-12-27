@@ -47,7 +47,7 @@ export function ProductList({ products, onImageClick }: ProductListProps) {
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
           <Input
-            placeholder="Search flowers..."
+            placeholder="Поиск цветов..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pl-10"
@@ -74,8 +74,8 @@ export function ProductList({ products, onImageClick }: ProductListProps) {
       {filteredProducts.length === 0 ? (
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🌸</div>
-          <h3 className="text-lg font-semibold text-gray-600 mb-2">No flowers found</h3>
-          <p className="text-gray-500">Try adjusting your search or filters</p>
+          <h3 className="text-lg font-semibold text-gray-600 mb-2">Цветов не найдено</h3>
+          <p className="text-gray-500">Попробуйте изменить параметры поиска или фильтры</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

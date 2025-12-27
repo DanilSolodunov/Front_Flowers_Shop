@@ -95,10 +95,10 @@ export function OrdersScreen({ onBack }: { onBack: () => void }) {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center py-16">
           <Package className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-          <h2 className="text-xl font-semibold mb-2">Please Sign In</h2>
-          <p className="text-gray-600 mb-6">You need to be signed in to view your orders</p>
+          <h2 className="text-xl font-semibold mb-2">Пожалуйста, войдите в систему</h2>
+          <p className="text-gray-600 mb-6">Для просмотра ваших заказов необходимо войти в систему</p>
           <Button onClick={onBack} className="bg-pink-500 hover:bg-pink-600">
-            Back to Catalog
+            Вернуться в каталог
           </Button>
         </div>
       </div>
@@ -110,18 +110,18 @@ export function OrdersScreen({ onBack }: { onBack: () => void }) {
       <div className="flex items-center gap-3 mb-6">
         <Button variant="ghost" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back
+          Назад
         </Button>
-        <h1 className="text-2xl font-bold">My Orders</h1>
+        <h1 className="text-2xl font-bold">Мои заказы</h1>
       </div>
 
       {mockOrders.length === 0 ? (
         <div className="text-center py-16">
           <Package className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-          <h2 className="text-xl font-semibold mb-2">No Orders Yet</h2>
-          <p className="text-gray-600 mb-6">Start shopping to see your orders here</p>
+          <h2 className="text-xl font-semibold mb-2">Заказов пока нет</h2>
+          <p className="text-gray-600 mb-6">Начните покупки, чтобы увидеть свои заказы здесь</p>
           <Button onClick={onBack} className="bg-pink-500 hover:bg-pink-600">
-            Start Shopping
+            Начать покупки
           </Button>
         </div>
       ) : (
@@ -149,7 +149,7 @@ export function OrdersScreen({ onBack }: { onBack: () => void }) {
                 
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-medium mb-2">Order Items:</h4>
+                    <h4 className="font-medium mb-2">Заказанные товары:</h4>
                     <div className="space-y-1">
                       {order.items.map((item, index) => (
                         <div key={index} className="flex justify-between text-sm">
@@ -162,7 +162,7 @@ export function OrdersScreen({ onBack }: { onBack: () => void }) {
 
                   <div className="border-t pt-3">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium">Total:</span>
+                      <span className="font-medium">Итого:</span>
                       <span className="font-bold text-lg text-pink-600">
                         ₽{order.total}
                       </span>
@@ -177,12 +177,12 @@ export function OrdersScreen({ onBack }: { onBack: () => void }) {
                   </div>
 
                   <div className="flex gap-2 pt-2">
-                    <Button variant="outline" size="sm" className="flex-1">
+                    {/* <Button variant="outline" size="sm" className="flex-1">
                       View Details
-                    </Button>
+                    </Button> */}
                     {order.status === 'delivered' && (
                       <Button size="sm" className="flex-1 bg-pink-500 hover:bg-pink-600">
-                        Order Again
+                        Повторить заказ
                       </Button>
                     )}
                   </div>

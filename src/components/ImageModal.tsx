@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { X, Download, Share2 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 

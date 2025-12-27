@@ -17,7 +17,7 @@ export function ProductList({ products, onImageClick }: ProductListProps) {
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
   const categories = useMemo(() => {
-    const cats = ['All', ...new Set(products.map(p => p.category))];
+    const cats = ['Все', ...new Set(products.map(p => p.category))];
     return cats;
   }, [products]);
 

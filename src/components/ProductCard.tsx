@@ -3,7 +3,7 @@ import { Plus, Search } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { useCart } from '../context/CartContext';
-import { Product } from '../types/product';
+import type { Product } from '../types/product';
 
 interface ProductCardProps {
   product: Product;

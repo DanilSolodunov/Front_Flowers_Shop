@@ -30,7 +30,7 @@ function AppContent() {
   const [orderId, setOrderId] = useState('');
   const [paymentMethod, setPaymentMethod] = useState<'cash' | 'online'>('cash');
   const [selectedImage, setSelectedImage] = useState<{ url: string; name: string } | null>(null);
-  const { items, totalItems, clearCart } = useCart();
+  const {totalItems, clearCart } = useCart();
   const { user, login } = useAuth();
   const { toasts } = useToast();
 

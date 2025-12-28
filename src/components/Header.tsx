@@ -207,7 +207,7 @@ export function Header({
 }: HeaderProps) {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const { user, login, logout } = useAuth();
-  const categories = ['all', 'Roses', 'Lilies', 'Bouquets', 'Tulips'];
+  const categories = ['Все', 'Roses', 'Lilies', 'Bouquets', 'Tulips'];
 
   return (
     <header className="sticky top-0 z-40 bg-white shadow-sm">
@@ -339,7 +339,7 @@ export function Header({
               onClick={() => onCategoryChange(category)}
               className="whitespace-nowrap"
             >
-              {category === 'all' ? 'All' : category}
+              {category === 'Все' ? 'Все' : category}
             </Button>
           ))}
         </div>

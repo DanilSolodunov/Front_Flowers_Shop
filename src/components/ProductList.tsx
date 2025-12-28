@@ -13,7 +13,7 @@ interface ProductListProps {
 
 export function ProductList({ products, onImageClick }: ProductListProps) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Все');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
   const categories = useMemo(() => {

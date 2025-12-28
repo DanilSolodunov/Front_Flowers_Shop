@@ -25,7 +25,7 @@ export function ProductList({ products, onImageClick }: ProductListProps) {
     let filtered = products;
 
     // Filter by category
-    if (selectedCategory !== 'All') {
+    if (selectedCategory !== 'Все') {
       filtered = filtered.filter(p => p.category === selectedCategory);
     }
 

@@ -26,7 +26,7 @@ export const mockProducts: Product[] = [
     emoji: '💐',
     category: 'Гортензии',
     description: 'Гортензия радужная',
-    imageUrl: 'https://camellia-market.com.ua/image/cache/catalog/06.04.24/img_3477-auto_width_1333.jpg'
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-B1quWo43E604KbV9brg5pCrVw-LaDTnH-g&s'
   },
   {
     id: 4,

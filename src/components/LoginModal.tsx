@@ -37,11 +37,11 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             email: email,
           };
           login(mockUser);
-          toast('Welcome back! 🌸', 'success');
+          toast('Добро пожаловать! 🌸', 'success');
           onClose();
           resetForm();
         } else {
-          toast('Please fill in all fields', 'error');
+          toast('Пожалуйста, заполните все поля', 'error');
         }
       } else {
         // Mock registration
@@ -52,11 +52,11 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             email: email,
           };
           login(mockUser);
-          toast('Account created successfully! 🎉', 'success');
+          toast('Учетная запись успешно создана! 🎉', 'success');
           onClose();
           resetForm();
         } else {
-          toast('Please fill in all fields', 'error');
+          toast('Пожалуйста, заполните все поля', 'error');
         }
       }
       setIsLoading(false);
@@ -103,12 +103,12 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
               <Flower2 className="w-8 h-8 text-white" />
             </div>
             <CardTitle className="text-2xl font-bold text-gray-800">
-              {isLogin ? 'Welcome Back' : 'Create Account'}
+              {isLogin ? 'Добро пожаловать' : 'Аккаунт создан'}
             </CardTitle>
             <p className="text-gray-600 text-sm">
               {isLogin 
-                ? 'Sign in to your FlowerShop account' 
-                : 'Join us and start ordering beautiful flowers'
+                ? 'Войдите в свою учетную запись TAD Flowers' 
+                : 'Присоединяйтесь к нам и начните заказывать красивые цветы!'
               }
             </p>
           </CardHeader>
@@ -118,7 +118,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
               {/* Name Field (Registration Only) */}
               {!isLogin && (
                 <div className="space-y-2">
-                  <Label htmlFor="name">Full Name</Label>
+                  <Label htmlFor="name">Имя полностью</Label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                     <Input
@@ -136,13 +136,13 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
 
               {/* Email Field */}
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="email">Email</Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <Input
                     id="email"
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder="Введите email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="pl-10"
@@ -153,13 +153,13 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
 
               {/* Password Field */}
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Пароль</Label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <Input
                     id="password"
                     type={showPassword ? 'text' : 'password'}
-                    placeholder="Enter your password"
+                    placeholder="Введите пароль"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="pl-10 pr-10"
@@ -184,19 +184,19 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
               {/* Remember Me & Forgot Password */}
               {isLogin && (
                 <div className="flex items-center justify-between text-sm">
-                  <label className="flex items-center space-x-2">
+                  {/* <label className="flex items-center space-x-2">
                     <input
                       type="checkbox"
                       className="rounded border-gray-300 text-pink-500 focus:ring-pink-500"
                     />
-                    <span className="text-gray-600">Remember me</span>
-                  </label>
+                    <span className="text-gray-600">Запомнить меня</span>
+                  </label> */}
                   <Button
                     type="button"
                     variant="link"
                     className="p-0 h-auto text-pink-600 hover:text-pink-700"
                   >
-                    Forgot password?
+                    Забыли пароль?
                   </Button>
                 </div>
               )}
@@ -208,8 +208,8 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 loading={isLoading}
               >
                 {isLoading 
-                  ? 'Please wait...' 
-                  : (isLogin ? 'Sign In' : 'Create Account')
+                  ? 'Пожалуйста, подождите...' 
+                  : (isLogin ? 'Войти' : 'Создать аккаунт')
                 }
               </Button>
             </form>
@@ -220,7 +220,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 <div className="w-full border-t border-gray-200" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                <span className="px-2 bg-white text-gray-500">Или продолжить</span>
               </div>
             </div>
 
@@ -265,7 +265,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 className="p-0 h-auto ml-1 text-pink-600 hover:text-pink-700"
                 onClick={() => setIsLogin(!isLogin)}
               >
-                {isLogin ? 'Sign up' : 'Sign in'}
+                {isLogin ? 'Зарегистрироваться' : 'Войти'}
               </Button>
             </div>
           </CardContent>

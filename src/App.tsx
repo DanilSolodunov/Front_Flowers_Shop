@@ -375,17 +375,17 @@ function AppContent() {
                     <>
                       <DropdownMenuItem onClick={() => setCurrentView('settings')}>
                         <Settings className="w-4 h-4 mr-2" />
-                        Settings
+                        Настройки
                       </DropdownMenuItem>
                       <DropdownMenuItem onClick={handleLogout}>
                         <LogIn className="w-4 h-4 mr-2" />
-                        Logout
+                        Выход
                       </DropdownMenuItem>
                     </>
                   ) : (
                     <DropdownMenuItem onClick={openLoginModal}>
                       <LogIn className="w-4 h-4 mr-2" />
-                      Login
+                      Войти
                     </DropdownMenuItem>
                   )}
                 </DropdownMenuContent>

@@ -27,7 +27,7 @@ export function ProductCard({ product, onImageClick }: ProductCardProps) {
               <span className="text-6xl">{product.emoji}</span>
             </div>
           ) : (
-            <div 
+            <div
               className="relative cursor-pointer overflow-hidden rounded-lg"
               onClick={() => onImageClick(product.imageUrl, product.name)}
             >
@@ -43,13 +43,17 @@ export function ProductCard({ product, onImageClick }: ProductCardProps) {
             </div>
           )}
         </div>
-        
-        <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-pink-600">
+        <div className="flex items-start justify-between mb-2">
+          <h3 className="font-semibold text-lg">
+            {product.name}
+          </h3>
+          <span className="text-xl font-bold text-pink-600 whitespace-nowrap">
             ₽{product.price}
           </span>
+        </div>
+        <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
+        <div className="flex items-center justify-between">
+          <h3 className="text-gray-600 text-sm mb-3 line-clamp-2">Остаток {product.amount} шт</h3>
           <Button
             size="sm"
             onClick={() => addToCart(product)}

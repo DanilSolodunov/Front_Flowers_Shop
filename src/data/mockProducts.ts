@@ -8,7 +8,8 @@ export const mockProducts: Product[] = [
     emoji: '🌹',
     category: 'Розы',
     description: 'Роза джумилия 50 см',
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL1wXwtn4dKuNMq-JsllGQ2BDse1RN09Ajyw&s'
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL1wXwtn4dKuNMq-JsllGQ2BDse1RN09Ajyw&s',
+    amount: 10
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ export const mockProducts: Product[] = [
     emoji: '🌺',
     category: 'Розы',
     description: 'Роза белая пышная 60 см',
-    imageUrl: 'https://funburg.ru/upload/iblock/246/7qddrao95u7gtqr8wuyv6he9cn161lw0/IMG_5010_800.webp'
+    imageUrl: 'https://funburg.ru/upload/iblock/246/7qddrao95u7gtqr8wuyv6he9cn161lw0/IMG_5010_800.webp',
+    amount: 15
   },
   {
     id: 3,
@@ -26,7 +28,8 @@ export const mockProducts: Product[] = [
     emoji: '💐',
     category: 'Гортензии',
     description: 'Гортензия радужная',
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-B1quWo43E604KbV9brg5pCrVw-LaDTnH-g&s'
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-B1quWo43E604KbV9brg5pCrVw-LaDTnH-g&s',
+    amount: 6
   },
   {
     id: 4,
@@ -35,7 +38,8 @@ export const mockProducts: Product[] = [
     emoji: '🌷',
     category: 'Тюльпаны',
     description: 'Тюльпаны белые местные',
-    imageUrl: 'https://tsvetomania.ru/upload/ammina.optimizer/jpg-webp/q80/upload/resize_cache/iblock/d26/710_605_1/d261c1882ee10cfb75fa1b2b34626002.webp'
+    imageUrl: 'https://tsvetomania.ru/upload/ammina.optimizer/jpg-webp/q80/upload/resize_cache/iblock/d26/710_605_1/d261c1882ee10cfb75fa1b2b34626002.webp',
+    amount: 7
   },
   {
     id: 5,
@@ -44,7 +48,8 @@ export const mockProducts: Product[] = [
     emoji: '🌹',
     category: 'Гипсофилы',
     description: 'Гипсофилы',
-    imageUrl: 'https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/231638/2ZaYEI1ve0KEOFpS5zQ.jpeg'
+    imageUrl: 'https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/231638/2ZaYEI1ve0KEOFpS5zQ.jpeg',
+    amount: 20
   },
   {
     id: 6,
@@ -53,7 +58,8 @@ export const mockProducts: Product[] = [
     emoji: '🌸',
     category: 'Хризантемы',
     description: 'Хризантема белая импортная',
-    imageUrl: 'https://flowers-yar.ru/assets/cache_image/products/259/1663402621-44965894_1000x0_7ee.jpg'
+    imageUrl: 'https://flowers-yar.ru/assets/cache_image/products/259/1663402621-44965894_1000x0_7ee.jpg',
+    amount: 13
   },
   {
     id: 7,
@@ -62,6 +68,7 @@ export const mockProducts: Product[] = [
     emoji: '🌺',
     category: 'Лилии',
     description: 'Лилии белые не окрашены',
-    imageUrl: 'https://labflower.com/upload/styles/large/public/flowers/img_6790.jpeg?itok=5aA9ulrN'
+    imageUrl: 'https://labflower.com/upload/styles/large/public/flowers/img_6790.jpeg?itok=5aA9ulrN',
+    amount: 4
   },
 ];
